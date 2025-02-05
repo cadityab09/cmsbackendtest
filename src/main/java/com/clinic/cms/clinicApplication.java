@@ -9,8 +9,8 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class clinicApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(clinicApplication.class, args);
 		System.out.println("Hospital Management ");
+		SpringApplication.run(clinicApplication.class, args);
 
 		// Load .env variables explicitly
 		Dotenv dotenv = Dotenv.configure()
@@ -24,6 +24,7 @@ public class clinicApplication {
 
 		System.out.println("DB_HOST: " + dotenv.get("DB_HOST"));
 		System.out.println("DB_PORT: " + dotenv.get("DB_PORT"));
+
 	}
 
 }
