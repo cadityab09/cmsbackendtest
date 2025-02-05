@@ -14,7 +14,63 @@ import lombok.Data;
 public class AssignBedDto {
     
 
-    private Long id;
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getBedId() {
+		return bedId;
+	}
+
+	public void setBedId(Long bedId) {
+		this.bedId = bedId;
+	}
+
+	public Long getPatientId() {
+		return patientId;
+	}
+
+	public void setPatientId(Long patientId) {
+		this.patientId = patientId;
+	}
+
+	public LocalDateTime getAssignedAt() {
+		return assignedAt;
+	}
+
+	public void setAssignedAt(LocalDateTime assignedAt) {
+		this.assignedAt = assignedAt;
+	}
+
+	public LocalDateTime getDischargedAt() {
+		return dischargedAt;
+	}
+
+	public void setDischargedAt(LocalDateTime dischargedAt) {
+		this.dischargedAt = dischargedAt;
+	}
+
+	public String getPatientProblem() {
+		return patientProblem;
+	}
+
+	public void setPatientProblem(String patientProblem) {
+		this.patientProblem = patientProblem;
+	}
+
+	public BedStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(BedStatus status) {
+		this.status = status;
+	}
+
+	private Long id;
 
     private Long bedId;
 
