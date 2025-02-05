@@ -15,7 +15,31 @@ import lombok.Data;
 @Data
 public class Bed {
 
-    @Id
+    public Long getBedId() {
+		return bedId;
+	}
+
+	public void setBedId(Long bedId) {
+		this.bedId = bedId;
+	}
+
+	public Long getBedNumber() {
+		return bedNumber;
+	}
+
+	public void setBedNumber(Long bedNumber) {
+		this.bedNumber = bedNumber;
+	}
+
+	public BedStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(BedStatus status) {
+		this.status = status;
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bedId;
 

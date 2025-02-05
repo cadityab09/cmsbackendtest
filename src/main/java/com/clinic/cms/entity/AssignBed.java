@@ -10,7 +10,63 @@ import com.clinic.cms.enums.BedStatus;
 @Data
 public class AssignBed {
 
-    @Id
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Bed getBed() {
+		return bed;
+	}
+
+	public void setBed(Bed bed) {
+		this.bed = bed;
+	}
+
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+
+	public LocalDateTime getAssignedAt() {
+		return assignedAt;
+	}
+
+	public void setAssignedAt(LocalDateTime assignedAt) {
+		this.assignedAt = assignedAt;
+	}
+
+	public LocalDateTime getDischargedAt() {
+		return dischargedAt;
+	}
+
+	public void setDischargedAt(LocalDateTime dischargedAt) {
+		this.dischargedAt = dischargedAt;
+	}
+
+	public String getPatientProblem() {
+		return patientProblem;
+	}
+
+	public void setPatientProblem(String patientProblem) {
+		this.patientProblem = patientProblem;
+	}
+
+	public BedStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(BedStatus status) {
+		this.status = status;
+	}
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
