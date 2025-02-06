@@ -13,7 +13,7 @@ public class clinicApplication {
 		SpringApplication.run(clinicApplication.class, args);
 
 		// Load .env variables explicitly
-		Dotenv dotenv = Dotenv.configure()
+		Dotenv dotenv = Dotenv.configure().ignoreIfMissing()
 				.load();
 
 				System.setProperty("DB_HOST", dotenv.get("DB_HOST"));
