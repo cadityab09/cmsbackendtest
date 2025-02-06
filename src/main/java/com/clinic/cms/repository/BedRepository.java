@@ -13,8 +13,8 @@ import com.clinic.cms.entity.Bed;
 @Repository
 public interface BedRepository extends JpaRepository<Bed, Long> {
 
-    @Query("SELECT new com.clinic.cms.dto.BedStatusDTO(b.bedId, b.bedNumber, b.status, p.id, p.name, p.age, ab.assignedAt, ab.patientProblem, p.contact, ab.dischargedAt) "
-            + "FROM Bed b " + "LEFT JOIN AssignBed ab ON b.id = ab.bed.bedId AND ab.dischargedAt IS NULL "
+    @Query("SELECT new com.clinic.cms.dto.BedStatusDTO(b.bedId, b.bedNumber, b.bedStatus, p.id, p.name, p.age, ab.assignedAt, ab.patientProblem, p.contact, ab.dischargedAt) "
+            + "FROM Bed b " + "LEFT JOIN AssignBed ab ON b.bedId = ab.bed.bedId AND ab.dischargedAt IS NULL "
             + "LEFT JOIN Patient p ON ab.patient.id = p.id")
     List<BedStatusDTO> fetchBedStatusWithPatientInfo();
 

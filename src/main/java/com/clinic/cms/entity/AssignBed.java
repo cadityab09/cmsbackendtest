@@ -59,11 +59,11 @@ public class AssignBed {
 	}
 
 	public BedStatus getStatus() {
-		return status;
+		return bedStatus;
 	}
 
 	public void setStatus(BedStatus status) {
-		this.status = status;
+		this.bedStatus = status;
 	}
 
 	@Id
@@ -86,5 +86,5 @@ public class AssignBed {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private BedStatus status;  
+    private BedStatus bedStatus;  
 }
