@@ -32,11 +32,11 @@ public class Bed {
 	}
 
 	public BedStatus getStatus() {
-		return status;
+		return bedStatus;
 	}
 
 	public void setStatus(BedStatus status) {
-		this.status = status;
+		this.bedStatus = status;
 	}
 
 	@Id
@@ -47,5 +47,5 @@ public class Bed {
     private Long bedNumber;
     
     @Enumerated(EnumType.STRING)
-    private BedStatus status;
+    private BedStatus bedStatus;
 }

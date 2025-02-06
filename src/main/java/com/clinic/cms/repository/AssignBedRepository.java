@@ -15,7 +15,7 @@ public interface AssignBedRepository extends JpaRepository<AssignBed, Long>{
     @Query("SELECT new com.clinic.cms.dto.BedStatusDTO( " +
        "ab.bed.bedId, " +
        "ab.bed.bedNumber, " +
-       "ab.bed.status, " +
+       "ab.bed.bedStatus, " +
        "ab.patient.id, " +
        "ab.patient.name, " +
        "ab.patient.age, " +

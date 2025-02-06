@@ -28,7 +28,7 @@ public class Doctor {
     @ElementCollection
     private List<String> days; // List of available days
 
-    private DoctorStatus status;
+    private DoctorStatus doctorStatus;
 
     // Getters and Setters
     public Long getId() { return id; }
@@ -51,4 +51,11 @@ public class Doctor {
 
     public List<String> getDays() { return days; }
     public void setDays(List<String> days) { this.days = days; }
+	public DoctorStatus getDoctorStatus() {
+		return doctorStatus;
+	}
+	public void setDoctorStatus(DoctorStatus doctorStatus) {
+		this.doctorStatus = doctorStatus;
+	}
+    
 }
