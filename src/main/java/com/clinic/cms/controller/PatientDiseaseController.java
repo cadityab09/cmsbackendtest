@@ -9,7 +9,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/patientdisease")
-@CrossOrigin(origins = "http://localhost:3000") // Adjust for your React app's port
+@CrossOrigin("*")
+// @CrossOrigin(origins = "http://localhost:3000") // Adjust for your React app's port
 public class PatientDiseaseController {
 
     @Autowired

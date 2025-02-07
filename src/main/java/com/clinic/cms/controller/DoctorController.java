@@ -9,7 +9,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/doctors")
-@CrossOrigin(origins = "http://localhost:3000") // Allow requests from React frontend
+@CrossOrigin("*")
+// @CrossOrigin(origins = "http://localhost:3000") // Allow requests from React frontend
 public class DoctorController {
     @Autowired
     private DoctorService doctorService;
