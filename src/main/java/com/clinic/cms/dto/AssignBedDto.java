@@ -63,11 +63,11 @@ public class AssignBedDto {
 	}
 
 	public BedStatus getStatus() {
-		return status;
+		return bedStatus;
 	}
 
 	public void setStatus(BedStatus status) {
-		this.status = status;
+		this.bedStatus = status;
 	}
 
 	private Long id;
@@ -83,5 +83,5 @@ public class AssignBedDto {
     private String patientProblem;
     
     @Enumerated(EnumType.STRING)
-    private BedStatus status;  
+    private BedStatus bedStatus;  
 }
