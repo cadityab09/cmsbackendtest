@@ -54,6 +54,7 @@ public class SecurityConfig {
 		.csrf(customizer -> customizer.disable())
 		.authorizeHttpRequests(request -> request
 				.requestMatchers("/users/login","/users/register","/api/enquiry/add").permitAll()
+				.requestMatchers("/api/doctors/lightly").permitAll()
 				.anyRequest().authenticated())
 //		.formLogin(Customizer.withDefaults())
 		.httpBasic(Customizer.withDefaults())
