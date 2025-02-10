@@ -1,5 +1,6 @@
 package com.clinic.cms.controller;
 
+import com.clinic.cms.dto.DoctorDTO;
 import com.clinic.cms.entity.Doctor;
 import com.clinic.cms.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,10 @@ public class DoctorController {
     @GetMapping
     public List<Doctor> getAllDoctors() {
         return doctorService.getAllDoctors();
+    }
+    @GetMapping("/lightly")
+    public List<DoctorDTO> getAllDoctorsLightly() {
+        return doctorService.getAllDoctorsLightly();
     }
     
 }

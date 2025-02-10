@@ -1,5 +1,6 @@
 package com.clinic.cms.service;
 
+import com.clinic.cms.dto.DoctorDTO;
 import com.clinic.cms.entity.Doctor;
 import com.clinic.cms.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,8 @@ public class DoctorService {
 
     public List<Doctor> getAllDoctors() {
         return doctorRepository.findAll();
+    }
+    public List<DoctorDTO> getAllDoctorsLightly() {
+        return doctorRepository.findAllDoctorsWithoutImages();
     }
 }
