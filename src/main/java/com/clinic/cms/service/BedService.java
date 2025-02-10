@@ -55,6 +55,7 @@ public class BedService {
             System.out.println("Null value at bed service");
         }
 
+        System.out.println(assignBedDto);
         return assignBedDto;
     }
 

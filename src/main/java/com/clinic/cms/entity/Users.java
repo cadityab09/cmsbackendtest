@@ -10,6 +10,8 @@ import com.clinic.cms.enums.UserRole;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -35,6 +37,7 @@ public class Users {
 	
 	private String password;
 	
+	@Enumerated(EnumType.STRING)
 	private UserRole userRole;
 	
 	public Long getId() {
