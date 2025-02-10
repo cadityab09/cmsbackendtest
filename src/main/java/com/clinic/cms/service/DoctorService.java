@@ -21,6 +21,8 @@ public class DoctorService {
         return doctorRepository.findAll();
     }
     public List<Doctor> getAllDoctorsLightly() {
-        return doctorRepository.findAllWithoutImg();
+        List<Doctor> doctorList =  doctorRepository.findAll();
+        doctorList.forEach(doctor -> doctor.setImg(""));
+        return doctorList;
     }
 }
