@@ -40,7 +40,6 @@ public class BedController {
     @GetMapping("/status")
     public ResponseEntity<List<BedStatusDTO>> getBedStatus() {
         List<BedStatusDTO> bedStatus = bedService.getBedStatus();
-
         return ResponseEntity.ok(bedStatus);
     }
 
@@ -54,7 +53,6 @@ public class BedController {
     @GetMapping("/history")
     public ResponseEntity<List<BedStatusDTO>> getBedHistory() {
         List<BedStatusDTO> bedHistoryList = bedService.getBedHistory();
-
         return ResponseEntity.ok(bedHistoryList);
     }
 }

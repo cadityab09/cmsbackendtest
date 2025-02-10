@@ -53,10 +53,7 @@ public class SecurityConfig {
 		.cors(Customizer.withDefaults())  // Enable CORS support
 		.csrf(customizer -> customizer.disable())
 		.authorizeHttpRequests(request -> request
-				.requestMatchers("/users/login","/users/register").permitAll()
-				.requestMatchers("/api/**").permitAll()
-				.requestMatchers("/api/beds/*").permitAll()
-//				.requestMatchers("/api/**").authenticated()
+				.requestMatchers("/users/login","/users/register","/api/enquiry/add").permitAll()
 				.anyRequest().authenticated())
 //		.formLogin(Customizer.withDefaults())
 		.httpBasic(Customizer.withDefaults())

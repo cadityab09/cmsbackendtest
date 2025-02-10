@@ -15,7 +15,8 @@ public interface BedRepository extends JpaRepository<Bed, Long> {
 
     @Query("SELECT new com.clinic.cms.dto.BedStatusDTO(b.bedId, b.bedNumber, b.bedStatus, p.id, p.name, p.age, ab.assignedAt, ab.patientProblem, p.contact, ab.dischargedAt) "
             + "FROM Bed b " + "LEFT JOIN AssignBed ab ON b.bedId = ab.bed.bedId AND ab.dischargedAt IS NULL "
-            + "LEFT JOIN Patient p ON ab.patient.id = p.id")
+            + "LEFT JOIN Patient p ON ab.patient.id = p.id"
+            + " ORDER BY b.bedId ASC")
     List<BedStatusDTO> fetchBedStatusWithPatientInfo();
 
     // @Query("SELECT ab FROM AssignBed ab WHERE ab.patient.id = :patientId ORDER BY ab.assignedAt DESC")

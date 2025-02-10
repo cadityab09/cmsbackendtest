@@ -1,5 +1,9 @@
 package com.clinic.cms.entity;
 
+import java.time.LocalDateTime;
+
+import com.clinic.cms.enums.EnquiryStatus;
+
 //public class Enquiry {
 //}
 
@@ -15,7 +19,46 @@ public class Enquiry {
 
     private String name;
 
-    private String contact;
+    private String mobile;
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    private String email;
+
+    private LocalDateTime dateTime;
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
+    @Enumerated(EnumType.STRING)
+    private EnquiryStatus enquiryStatus;
+
+    public EnquiryStatus getEnquiryStatus() {
+        return enquiryStatus;
+    }
+
+    public void setEnquiryStatus(EnquiryStatus enquiryStatus) {
+        this.enquiryStatus = enquiryStatus;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     private String message;
 
@@ -24,11 +67,11 @@ public class Enquiry {
     }
 
     // All-argument constructor
-    public Enquiry(Long id, String name,  String contact, String message) {
+    public Enquiry(Long id, String name,  String mobile, String message) {
         this.id = id;
         this.name = name;
 
-        this.contact = contact;
+        this.mobile = mobile;
 
         this.message = message;
     }
@@ -49,17 +92,6 @@ public class Enquiry {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
 
     public String getMessage() {
         return message;
