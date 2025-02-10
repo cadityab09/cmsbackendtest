@@ -9,6 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 public interface DoctorRepository extends JpaRepository<Doctor, Long> {
-    @Query("SELECT new com.clinic.cms.dto.DoctorDTO(d.id, d.name, d.specialties, d.inTime, d.outTime, d.days, d.doctorStatus) FROM Doctor d")
-    List<DoctorDTO> findAllDoctorsWithoutImages();
+   
 }

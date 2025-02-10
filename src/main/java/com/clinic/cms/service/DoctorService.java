@@ -20,7 +20,9 @@ public class DoctorService {
     public List<Doctor> getAllDoctors() {
         return doctorRepository.findAll();
     }
-    public List<DoctorDTO> getAllDoctorsLightly() {
-        return doctorRepository.findAllDoctorsWithoutImages();
+    public List<Doctor> getAllDoctorsLightly() {
+        List<Doctor> doctorList =  doctorRepository.findAll();
+        doctorList.forEach(doctor -> doctor.setImg(""));
+        return doctorList;
     }
 }
