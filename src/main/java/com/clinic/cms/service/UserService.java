@@ -54,6 +54,7 @@ public class UserService {
 	    	if(optionalUser != null) {
 		    	authenticationResponse.setJwt(jwt);
 		    	authenticationResponse.setUserRole(optionalUser.getUserRole());
+		    	authenticationResponse.setUserName(optionalUser.getUsername());
 		    	authenticationResponse.setUserId(optionalUser.getId());
 	    	}
 	    	System.out.println(authenticationResponse);
