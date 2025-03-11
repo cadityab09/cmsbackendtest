@@ -18,15 +18,16 @@ public class UserPrincipal implements UserDetails {
 	private Users user;
 	
 	public UserPrincipal(Users user) {
-		System.out.println("Aditya Chavan");
 		this.user=user;
+		System.out.println(user.getUserRole().toString());
+
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
 		
-		return Collections.singleton(new SimpleGrantedAuthority("USER"));
+		return Collections.singleton(new SimpleGrantedAuthority(user.getUserRole().toString()));
 	}
 
 	@Override

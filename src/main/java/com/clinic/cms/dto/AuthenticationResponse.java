@@ -9,6 +9,7 @@ import lombok.Data;
 public class AuthenticationResponse {
 	private String jwt;
 	private Long userId;
+	private String userName;
 	private UserRole userRole;
 	public String getJwt() {
 		return jwt;
